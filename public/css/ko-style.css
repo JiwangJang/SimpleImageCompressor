@@ -1,0 +1,7 @@
+:root {
+  --earth-icon-content: "언어선택하기";
+  --email-icon-content: "개발자에게 이메일보내기";
+  --light-font: "ko-Light";
+  --bold-font: "ko-Bold";
+  letter-spacing: -1px;
+}

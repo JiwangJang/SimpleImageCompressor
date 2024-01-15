@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="smile">
+    <g>
+      <path class="cls-1" d="m18,2c8.82,0,16,7.18,16,16s-7.18,16-16,16S2,26.82,2,18,9.18,2,18,2m0-2C8.06,0,0,8.06,0,18s8.06,18,18,18,18-8.06,18-18S27.94,0,18,0h0Z"/>
+      <circle class="cls-1" cx="11" cy="15" r="3"/>
+      <circle class="cls-1" cx="25" cy="15" r="3"/>
+      <path class="cls-1" d="m25.3,25c-1.29,1.77-4.18,3-7.3,3s-6.01-1.23-7.3-3h14.59m1.21-2H9.49c-.85,0-1.49.82-1.22,1.62,1.05,3.08,5.01,5.38,9.73,5.38s8.68-2.29,9.73-5.38c.27-.8-.37-1.62-1.22-1.62h0Z"/>
+    </g>
+  </g>
+</svg>

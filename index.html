@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimpleImageCompressor</title>
+    <meta name="description" content="Compress Your Image Simply!" />
+    <meta
+      name="keywords"
+      content="image, compress, file, storage, compressor, down"
+    />
+    <meta property="og:title" content="SimpleImageCompressor" />
+    <meta property="og:description" content="Compress Your Image Simply!" />
+    <meta property="image" content="./public/icon/Logo(small).svg" />
+    <link rel="stylesheet" href="./public/css/styles.css" />
+    <link rel="stylesheet" href="./public/css/en-style.css" />
+    <link rel="shortcut icon" href="./public/pavicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="all-loading">
+      <div id="all-loading-circle-container" class="loading-circle-container">
+        <svg width="108" height="108" viewBox="0 0 108 108" fill="none">
+          <circle
+            cx="54"
+            cy="54"
+            r="47"
+            stroke="#B4B4B4"
+            stroke-width="14"
+            id="loading-circle"
+          />
+        </svg>
+        <p>Loading..</p>
+      </div>
+    </div>
+    <div id="drop-area" class="visible-hidden">Go ahead!</div>
+    <div id="language-modal" class="hidden">
+      <div id="language-select-container">
+        <img src="./public/icon/close.svg" />
+        <p>Select Your language!</p>
+        <ul>
+          <li>
+            <a href="./index-kr.html">
+              <span>한국어</span
+              ><img src="./public/icon/nationalplag/kr.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="./index.html">
+              English
+              <img src="./public/icon/nationalplag/en.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="mail-modal" class="hidden">
+      <div id="mail-container">
+        <img src="./public/icon/close.svg" />
+        <p>Send me your opinion</p>
+        <form
+          action="https://script.google.com/macros/s/AKfycbyDrP-PXnpW78wMrEZaGhJ53krODu6ALIkh7WlcJ9EWQnoHUszUrOjapxlWhp9992CR/exec"
+          id="mail-form"
+          class="gform"
+          method="POST"
+          target="email-send"
+        >
+          <input type="text" name="title" id="mail-title" placeholder="Title" />
+          <textarea
+            name="content"
+            id="mail-content"
+            placeholder="Type your opinion"
+          ></textarea>
+          <button id="mail-send">Send</button>
+        </form>
+      </div>
+    </div>
+    <header>
+      <div class="header-container layout">
+        <img
+          src="./public/icon/Logo(big).svg"
+          alt="Site's Logo"
+          id="Logo-big"
+        />
+        <img
+          src="./public/icon/Logo(small).svg"
+          alt="Site's Logo"
+          id="Logo-small"
+        />
+        <div class="utils-icon">
+          <div id="email-icon"></div>
+          <div id="earth-icon"></div>
+        </div>
+      </div>
+    </header>
+    <div id="CTA-section" class="layout">
+      <h1 id="h1" class="section-title">Compress Image Simply!</h1>
+      <div id="select-area">
+        <div id="upload">
+          <img
+            src="./public/icon/File Upload.svg"
+            alt="upload icon"
+            id="upload-icon"
+            draggable="false"
+          />
+          <p id="select-box-comment">
+            Select your images or drop images anywhere!
+          </p>
+          <label for="file-input" id="select-button">Select your image</label>
+          <input
+            type="file"
+            multiple
+            id="file-input"
+            accept="image/*"
+            style="display: none"
+          />
+        </div>
+        <div
+          id="upload-loading-circle-container"
+          class="loading-circle-container hidden"
+        >
+          <svg width="108" height="108" viewBox="0 0 108 108" fill="none">
+            <circle
+              cx="54"
+              cy="54"
+              r="47"
+              stroke="#B4B4B4"
+              stroke-width="14"
+              id="loading-circle"
+            />
+          </svg>
+          <p>Processing...</p>
+        </div>
+        <div id="image-preview" class="hidden"></div>
+      </div>
+      <div id="download-part" class="hidden">
+        <div>
+          <div id="total-image"><span></span> in total</div>
+          <div id="isZip">
+            <label for="zip">Do you want a compressed file?</label>
+            <input type="checkbox" id="zip" />
+          </div>
+        </div>
+        <button id="Dw-btn">Download</button>
+      </div>
+    </div>
+    <div id="feature-section">
+      <div class="layout">
+        <h2 id="feature-section-title" class="section-title">OUR FEATURE</h2>
+        <div id="feature-cards"></div>
+        <div id="handbook">
+          <div id="manual">
+            <p class="section-title">HOW TO USE?</p>
+            <ol id="manual-list">
+              <li>Select Image To Compress</li>
+              <li>Click "Select Your Image" Button</li>
+              <li>If You Want Zip File Check The Box</li>
+              <li>Download Merrily!</li>
+            </ol>
+          </div>
+          <div id="success-image"></div>
+        </div>
+      </div>
+    </div>
+    <div id="FAQ-section" class="layout">
+      <h2 class="section-title">Frequently asked questions</h2>
+    </div>
+    <footer>If have any question, let me know by <a>send email.</a></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <script src="./public/js/en/featureCardMaker.js" type="module"></script>
+    <script src="./public/js/en/FAQMaker.js" type="module"></script>
+    <script src="./public/js/common.js"></script>
+    <iframe name="email-send" style="display: none"></iframe>
+  </body>
+</html>
