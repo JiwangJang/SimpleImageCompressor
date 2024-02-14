@@ -127,17 +127,17 @@
         const newBase64 = drawCanvas.toDataURL("image/jpeg", 0.3);
         if (isZip) {
           const base64part = newBase64.split(",")[1];
-          zip.file(`reduced_${filename}`, base64part, { base64: true });
+          zip.file(filename, base64part, { base64: true });
           if (index + 1 == ary.length) {
             zip.generateAsync({ type: "blob" }).then(function (content) {
-              saveAs(content, "example.zip");
+              saveAs(content, "reduced.zip");
               visibleLoading(false);
               visibleUpload(true);
             });
           }
         } else {
           const downloadAtag = document.createElement("a");
-          downloadAtag.download = `reduced_${filename}`;
+          downloadAtag.download = filename;
           downloadAtag.href = newBase64;
           downloadAtag.click();
           visibleLoading(false);
