@@ -87,7 +87,7 @@
         imgObj.setAttribute("data-name", `(${index})${filename}`);
         fileList.push({
           base64: fileReader.result,
-          filename: `(${index})${filename}`,
+          filename: filename,
         });
         imgObj.onload = () => {
           previewContainer.appendChild(imgObj);
