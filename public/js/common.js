@@ -124,7 +124,7 @@
         drawCanvas.width = e.target.width;
         drawCanvas.height = e.target.height;
         context.drawImage(e.target, 0, 0);
-        const newBase64 = drawCanvas.toDataURL("image/jpeg", 1);
+        const newBase64 = drawCanvas.toDataURL("image/jpeg", 0.8);
         if (isZip) {
           const base64part = newBase64.split(",")[1];
           zip.file(filename, base64part, { base64: true });
